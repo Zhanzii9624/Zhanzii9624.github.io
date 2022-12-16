@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+</head>
+<body>
+
+<script>
+
+var firstInteger, secondInteger;
+firstInteger = window.prompt("Enter first integer");
+secondInteger = window.prompt("Enter second integer");
+firstInteger = parseInt(firstInteger);
+secondInteger = parseInt(secondInteger);
+
+if(firstInteger > secondInteger){
+	document.body.style.backgroundColor = "lightblue";
+	document.writeln(firstInteger + ">" + secondInteger);
+}else if(secondInteger > firstInteger){
+	document.body.style.backgroundColor = "lightgreen";
+	document.writeln(secondInteger + ">" + firstInteger);
+}else{
+	document.body.style.backgroundColor = "lightyellow";
+	document.writeln(firstInteger + "=" + secondInteger);
+}
+
+
+</script>
+
+
+
+
+
+<input type="button" value="1st button" onclick="alert(firstInteger)">
+
+<input type="button" value="2nd button" onclick="alert(secondInteger)">
+
+
+
+</body>
+</html>
