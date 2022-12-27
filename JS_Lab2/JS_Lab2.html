@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	
+</head>
+<body>
+	
+		<img id = "die1" src = "die1.png" alt = "blank image">
+		<img id = "die2" src = "die1.png" alt = "blank image">
+		<img id = "die3" src = "die1.png" alt = "blank image">
+		<img id = "die4" src = "die1.png" alt = "blank image">
+		<img id = "die5" src = "die1.png" alt = "blank image">
+		<img id = "die6" src = "die1.png" alt = "blank image">
+		<br>
+		<img id = "die7" src = "die1.png" alt = "blank image">
+		<img id = "die8" src = "die1.png" alt = "blank image">
+		<img id = "die9" src = "die1.png" alt = "blank image">
+		<img id = "die10" src = "die1.png" alt = "blank image">
+		<img id = "die11" src = "die1.png" alt = "blank image">
+		<img id = "die12" src = "die1.png" alt = "blank image">
+	
+	<form action="#">
+		<input id = "rollButton" type = "button" value = "Roll Dice">
+	</form>
+	<div id="FrequencyTable"></div>
+
+
+	<script>
+		
+
+		var die1Img,die2Img,die3Img,die4Img,die5Img,die6Img,die7Img,die8Img,die9Img,die10Img,die11Img,die12Img;
+		function start()
+		{
+			var button = document.getElementById("rollButton");
+			button.addEventListener("click",rollDice,false);
+			die1Img = document.getElementById("die1");
+			die2Img = document.getElementById("die2");
+			die3Img = document.getElementById("die3");
+			die4Img = document.getElementById("die4");
+			die5Img = document.getElementById("die5");
+			die6Img = document.getElementById("die6");
+			die7Img = document.getElementById("die7");
+			die8Img = document.getElementById("die8");
+			die9Img = document.getElementById("die9");
+			die10Img = document.getElementById("die10");
+			die11Img = document.getElementById("die11");
+			die12Img = document.getElementById("die12");
+		}
+
+		function rollDice()
+		{
+			setImage(die1Img);
+			setImage(die2Img);
+			setImage(die3Img);
+			setImage(die4Img);
+			setImage(die5Img);
+			setImage(die6Img);
+			setImage(die7Img);
+			setImage(die8Img);
+			setImage(die9Img);
+			setImage(die10Img);
+			setImage(die11Img);
+			setImage(die12Img);
+		}
+
+		function setImage(dieImg)
+		{
+			var dieValue = Math.floor( 1 + Math.random()*6 );
+			dieImg.setAttribute("src","die"+ dieValue + ".png");
+			dieImg.setAttribute("alt","die image with "+ dieValue + " spot(s)");
+		}
+
+		window.addEventListener("load",start,false);
+
+		var frequency1=0,frequency2=0,frequency3=0,frequency4=0,frequency5=0,frequency6=0,percent1=0.00,percent2=0.00,percent3=0.00,percent4=0.00,percent5=0.00,percent6=0.00;
+
+
+		var table = document.getElementById("FrequencyTable");
+		table.innerHTML=
+		"<table border = 1>"
+
+
+	</script>
+
+	<br>
+	<b>Die Rolling Frequencies</b>
+	<table>
+		<tr>
+			<th>Face</th>
+			<th>Frequency</th>
+			<th>Percent</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>frenquency1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+	</table>
+	
+
+	<script language=javascrip>
+	<!--
+		/*
+		<style>
+			table{border: 1px solid black;border-collapse: collapse;}
+			th{border: 1px solid;background-color: darkslateblue;color: white}
+			td{border: 1px solid;background-color: lightblue;}
+		</style>
+
+
+
+
+
+
+			var firstInt, secondInt, thirdInt;
+			firstInt = window.prompt("Enter first number");
+			secondInt = window.prompt("Enter second number");
+			thirdInt = window.prompt("Enter third number");
+			firstInt = parseInt(firstInt);
+			secondInt = parseInt(secondInt);
+			thirdInt = parseInt(thirdInt);
+
+			document.write("First number:" + firstInt + "<br>");
+			document.write("Second number:" + secondInt + "<br>");
+			document.write("Third number:" + thirdInt + "<br>");
+			if(firstInt >= secondInt){
+				if(secondInt >= thirdInt){
+					document.write("Maximum is:" + firstInt);
+				}else if(firstInt >= thirdInt){
+					document.write("Maximum is:" + firstInt);
+				}else{
+					document.write("Maximum is:" + thirdInt);
+				}
+			}else{
+				if(firstInt >= thirdInt){
+					document.write("Maximum is:" + secondInt);
+				}else if(secondInt >= thirdInt){
+					document.write("Maximum is:" + secondInt);
+				}else{
+					document.write("Maximum is:" + thirdInt);
+				}
+				
+			}
+
+		*/
+	-->
+	</script>
+
+
+</body>
+</html>
